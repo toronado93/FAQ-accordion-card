@@ -1,0 +1,425 @@
+:root {
+
+    /* Color */
+
+   
+
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-150:hsl(0, 0%, 0%);
+
+    --clr-neutral-200: hsl(237, 12%, 33%);
+    --clr-neutral-300: hsl(240, 6%, 50%);
+
+
+  /* Gradient */
+
+  --clr-gradient-100: hsl(273, 75%, 66%);
+  --clr-gradient-200: hsl(240, 73%, 65%);
+
+  --fs-main:12px;
+
+  --ff-primary: 'Kumbh Sans', sans-serif;
+  
+  
+  /* Font-Weight */
+  
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+
+    /* Special variables for spacing */
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.5rem;
+    --size-600: 2rem;
+    --size-700: 3rem;
+    --size-800: 4rem;
+    --size-900: 5rem;
+
+
+
+}
+
+
+
+
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-main);
+  /* display: grid;
+  justify-content: center;
+  align-items: center; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ 
+  height: 100vh;
+  background: var(--clr-gradient-200); /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(
+    to bottom,
+    var(--clr-gradient-100),
+    var(--clr-gradient-200)
+  ); */
+  background: linear-gradient(to bottom,var(--clr-gradient-100) 50% , var(--clr-gradient-200) 100%); /
+}
+
+
+
+
+
+/* Restarter */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Creating core default body height  */
+html,
+body {
+  height: 100%;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* If A p doesnt have class make them stay left */
+/* p:not([class]) {
+  opacity: 0.7;
+  max-width: 32ch;
+}
+
+p[data-width="wide"] {
+  max-width: 42ch;
+} */
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+/* @media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} */
+
+
+
+/* Utility*/
+
+
+.container{
+
+    
+    width: 100%;
+    min-width: 375px;
+   
+    background-color: var(--clr-neutral-100);
+    border-radius: 25px;
+
+    box-shadow: 0 2.5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+}
+
+.desktop-img-wrapper{
+    display: none;
+}
+
+.box-image-wrapper{
+    display: none;
+}
+
+@media screen and (min-width: 50em){
+
+    .box-image-wrapper{
+        display: block;
+    }
+    
+
+    .container{
+        height: 650px;
+        overflow: hidden;
+    }
+
+
+    .desktop-img-wrapper{
+        /* margin: var(--size-900); */
+        position: relative;
+        display: block;
+        width: 100%;
+       
+    }
+
+    .box-image-wrapper{
+        position: relative;
+     }
+
+    .box{
+        position: absolute;
+        top: 270px;
+        left: -140px;
+        width: 20%;
+        z-index: 100;
+    }
+
+
+    .woman{
+       
+       position: absolute;
+        top: -300px;
+        left: -200px;
+        width: 150%;
+        height: auto;
+        overflow: hidden;
+        z-index: 50;
+        
+    }
+
+    .shadow{
+        position: absolute;
+        
+        top: -350px;
+        left: -200px;
+    }
+
+    /* Main was a obstacle to containers growth */
+    main{
+        
+        width: 100%;
+        max-width: 1440px;
+    }
+    .img-wrapper{
+        display: none;
+    }
+
+    .accordion{
+       
+        width: 80%;
+        padding-right: var(--size-900);
+        
+        
+    }
+
+   .container{
+    
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+
+    /* Responsive width */
+    padding: 20px;
+    /* Add any other styles you need for the container */
+    margin: 0 auto; /* Center horizontally by default */
+   }
+
+
+   .text-align-left{
+    text-align: left !important;
+    padding-left: 2rem;
+   }
+
+ 
+   
+    
+}
+
+
+
+.text-center{
+    text-align: center;
+    margin-inline: auto;
+}
+
+/* IMG */
+
+.img-wrapper::after{
+
+    /* position: absolute;
+    content: url(/images/bg-pattern-mobile.svg);
+    top: 20px;
+    left: 60px;
+    width: 200px; */
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: 30px;
+    width: 80%;
+    height: 100%;
+    background-image: url(/images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.img-wrapper{
+    position: relative;
+    height: 130px;
+    margin-block-end: var(--size-500);
+    
+}
+
+.img-wrapper img{
+    width: 80%;
+    position: absolute;
+
+    top: -135px;
+    left: 30px;
+}
+
+
+
+/* Accordion */
+
+
+.accordion_title{
+
+
+    font-size:var(--size-600);
+    font-weight: var(--fw-bold);
+
+    margin-block-end: var(--size-500);
+
+}
+
+
+.accordion_main_wrapper{
+
+    display: grid;
+    gap:2rem ;
+    
+    padding-inline: 2rem;
+    padding-bottom: 3rem;
+
+}
+
+.accordion_wrapper{
+
+    border-bottom: 0.5px solid gray;
+    padding-bottom: 0.5rem;
+   
+}
+
+.accordion_content{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.75rem;
+    margin-left: 2px;
+    
+}
+
+
+.accordion_paragraph{
+        
+    font-size: 14px;
+    color: var(--clr-neutral-200);
+    opacity: 0.75;
+}
+  
+
+.arrow_button {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .arrow_button.rotate {
+    transform: rotate(180deg);
+  }
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.4;
+    }
+  }
+
+.accordion_sub_paragraph{
+   
+    opacity: 0.4;
+    display: none;
+
+}
+
+.accordion_sub_paragraph.show {
+    
+    width: 40ch;
+
+    animation: fadeIn 1s ease-in;
+    display: block;
+    padding-bottom: var(--size-300);
+    
+  }
+
+
+h1[aria-expanded="true"]{
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-150);
+}
+
+
+.arrow_button::before{
+    content: url(/images/icon-arrow-down.svg);
+ 
+}
+
+.arrow_button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+
+}
+
+
+
