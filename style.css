@@ -294,7 +294,7 @@ picture {
     left: 30px;
     width: 80%;
     height: 100%;
-    background-image: url(/images/bg-pattern-mobile.svg);
+    background-image: url(images/bg-pattern-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -408,7 +408,7 @@ h1[aria-expanded="true"]{
 
 
 .arrow_button::before{
-    content: url(/images/icon-arrow-down.svg);
+    content: url(images/icon-arrow-down.svg);
  
 }
 
