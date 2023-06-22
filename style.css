@@ -294,7 +294,7 @@ picture {
     left: 30px;
     width: 80%;
     height: 100%;
-    background-image: url(images/bg-pattern-mobile.svg);
+    background-image: url(https://cdn.glitch.global/94f12bd5-8f76-463f-9d81-fb5f73944c3e/bg-pattern-mobile.svg?v=1687388166958);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -408,7 +408,7 @@ h1[aria-expanded="true"]{
 
 
 .arrow_button::before{
-    content: url(images/icon-arrow-down.svg);
+    content: url(https://cdn.glitch.global/94f12bd5-8f76-463f-9d81-fb5f73944c3e/icon-arrow-down.svg?v=1687388167687);
  
 }
 
