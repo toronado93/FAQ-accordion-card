@@ -3,137 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Frontend Mentor | FAQ Accordion Card</title>
 
     <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
+
+  <style></style>
+
   <body>
-    <main>
-      <div class="box-image-wrapper">
-        <img
-          class="box"
-          src="/images/illustration-box-desktop.svg"
-          alt=""
-          srcset=""
-        />
+    <main class="fade-in">
+      <div class="section__illustration | illustration-mobile">
+        <svg class="illustration">
+          <image
+            href="/images/illustration-woman-online-mobile.svg"
+            width="100%"
+            height="100%"
+          />
+        </svg>
+        <svg class="bg-pattern">
+          <image
+            href="/images/bg-pattern-mobile.svg"
+            width="240"
+            height="104"
+          />
+        </svg>
       </div>
 
-      <div class="container">
-        <div class="desktop-img-wrapper">
-          <img
-            class="woman"
-            src="/images/illustration-woman-online-desktop.svg"
-            alt=""
-            srcset=""
+      <svg class="box">
+        <image
+          href="/images/illustration-box-desktop.svg"
+          width="191"
+          height="184"
+        />
+      </svg>
+      <div class="section__illustration | illustration-desktop">
+        <svg class="illustration">
+          <image
+            href="/images/illustration-woman-online-desktop.svg"
+            width="472"
+            height="359"
           />
-
-          <img class="shadow" src="/images/bg-pattern-desktop.svg" alt="" />
-        </div>
-
-        <div class="img-wrapper">
-          <img src="/images/illustration-woman-online-mobile.svg" alt="" />
-        </div>
-
-        <div class="accordion">
-          <div class="accordion_title | text-center">
-            <h1 class="text-align-left">FAQ</h1>
-          </div>
-          <div class="accordion_main_wrapper">
-            <div class="accordion_wrapper">
-              <div class="accordion_content">
-                <h1 class="accordion_paragraph" aria-expanded="false">
-                  How many team members can I invite?
-                </h1>
-                <button class="arrow_button"></button>
-              </div>
-              <p class="accordion_sub_paragraph">7</p>
-            </div>
-            <div class="accordion_wrapper">
-              <div class="accordion_content">
-                <h1 class="accordion_paragraph" aria-expanded="false">
-                  What is the maximum file upload size?
-                </h1>
-                <button class="arrow_button"></button>
-              </div>
-              <p class="accordion_sub_paragraph">
-                No more than 2GB. All files in your account must fit your
-                allotted storage space.
-              </p>
-            </div>
-            <div class="accordion_wrapper">
-              <div class="accordion_content">
-                <h1 class="accordion_paragraph" aria-expanded="false">
-                  How do I reset my password?
-                </h1>
-                <button class="arrow_button"></button>
-              </div>
-              <p class="accordion_sub_paragraph">
-                No password change option applicable.
-              </p>
-            </div>
-            <div class="accordion_wrapper">
-              <div class="accordion_content">
-                <h1 class="accordion_paragraph" aria-expanded="false">
-                  Can I cancel my subscription?
-                </h1>
-                <button class="arrow_button"></button>
-              </div>
-              <p class="accordion_sub_paragraph">
-                No I am afraid. Once you are enroll. You have to pay it
-                lifetime.
-              </p>
-            </div>
-            <div class="accordion_wrapper">
-              <div class="accordion_content">
-                <h1 class="accordion_paragraph" aria-expanded="false">
-                  Do you provide additional support?
-                </h1>
-                <button class="arrow_button"></button>
-              </div>
-              <p class="accordion_sub_paragraph">No</p>
-            </div>
-          </div>
-        </div>
+        </svg>
+        <svg class="bg-pattern">
+          <image
+            href="/images/bg-pattern-desktop.svg"
+            width="966"
+            height="945"
+          />
+        </svg>
+      </div>
+      <div class="section__faq">
+        <h1 class="primary-heading">faq</h1>
+        <ul class="faq-list" role="list">
+          <li role="listitem">
+            <p class="question">How many team members can I invite?</p>
+            <p class="answer">
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p>
+          </li>
+          <li class="active" role="listitem">
+            <p class="question">What is the maximum file upload size?</p>
+            <p class="answer">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </li>
+          <li role="listitem">
+            <p class="question">How do I reset my password?</p>
+            <p class="answer">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p>
+          </li>
+          <li role="listitem">
+            <p class="question">Can I cancel my subscription?</p>
+            <p class="answer">
+              Yes! Send us a message, and we’ll process your request no
+              questions asked.
+            </p>
+          </li>
+          <li role="listitem">
+            <p class="question">Do you provide additional support?</p>
+            <p class="answer">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p>
+          </li>
+        </ul>
       </div>
     </main>
 
     <script>
-      // when button is clicked made p visible
+      const questions = document.querySelectorAll(".question");
 
-      const buttons = document.querySelectorAll(".arrow_button");
-
-      // Add click event listener to each button
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          // find h1 and toggle
-          const h1 = button.previousElementSibling;
-
-          if (h1.hasAttribute("data-visible")) {
-            h1.setAttribute("aria-expanded", false);
-            h1.toggleAttribute("data-visible");
-          } else {
-            h1.setAttribute("aria-expanded", true);
-            h1.toggleAttribute("data-visible");
-          }
-
-          button.classList.toggle("rotate");
-          const parentDiv = button.closest(".accordion_wrapper");
-          const paragraph = parentDiv.querySelector(".accordion_sub_paragraph");
-          paragraph.classList.toggle("show");
+      questions.forEach((question) => {
+        question.addEventListener("click", () => {
+          question.parentElement.classList.toggle("active");
         });
       });
     </script>
